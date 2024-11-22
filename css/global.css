@@ -1,0 +1,24 @@
+/* 
+
+'The Seasons' is a serif font designed by MyCreativeLand
+and can be accessed in https://www.fontshmonts.com/text-fonts/the-seasons-free-font-family/
+
+*/
+
+@font-face {
+	font-family: 'The Seasons';
+	src: url("../fonts/theseasons-reg.otf") format("opentype");
+}
+
+h1, h2 {
+	font-family: 'The Seasons', serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+body {
+	background-color: #f3efe0;
+}
