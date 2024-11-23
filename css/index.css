@@ -6,12 +6,6 @@ body {
 	overflow: hidden;
 }
 
-h1 {
-	font-size: 75px;
-	-webkit-text-stroke: 1px black;
-	color: #cda135;
-}
-
 h2 {
 	font-size: 30px;
 	margin-top: -40px;
@@ -21,7 +15,7 @@ h2 {
 
 h1, h2 {
 	text-align: right;
-	margin-right: 25px;
+	margin-right: 30px;
 }
 
 img[ alt="Saint Augustine" ] {
@@ -64,26 +58,26 @@ img[ alt="Saint Augustine" ] {
 	width: 30px;
 
 	position: absolute;
-	right: calc(var(--timelineX) - 1vw + 3px);
+	right: calc(var(--timelineX) - 1vw + 2px);
 }
 
 .button {
 	background-color: #cda135;
 	width: 200px;
+	height: fit-content;
 	text-align: center;
 
 	padding: 10px;
 	border-radius: 20px;
 
 	position: absolute;
-	right: calc(var(--timelineX) - 15vw);
+	right: calc(var(--timelineX) - 16vw);
 }
 
 .shadow {
 	background-color: black;
 	z-index: -1;
 	
-	position: absolute;
 	right: calc(var(--timelineX) - 15vw - 10px);
 }
 

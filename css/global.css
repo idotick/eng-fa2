@@ -1,17 +1,44 @@
 /* 
 
 'The Seasons' is a serif font designed by MyCreativeLand
-and can be accessed in https://www.fontshmonts.com/text-fonts/the-seasons-free-font-family/
+and can be accessed in https://befonts.com/the-seasons-font.html
 
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
 @font-face {
 	font-family: 'The Seasons';
 	src: url("../fonts/theseasons-reg.otf") format("opentype");
 }
 
-h1, h2 {
+/* 
+
+.rosario-<uniquifier> {
+  font-family: "Rosario", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+*/
+
+p, a, ul {
+	font-family: "Rosario", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+  
+
+h1, h2, nav a {
 	font-family: 'The Seasons', serif;
+}
+
+h1 {
+	font-size: 75px;
+	-webkit-text-stroke: 1px black;
+	color: #cda135;
 }
 
 a {
@@ -21,4 +48,31 @@ a {
 
 body {
 	background-color: #f3efe0;
+	margin: auto 30px auto 30px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.shadow {
+	position: absolute;
+	background-color: black;
+	z-index: -1;
+}
+
+nav {
+	background-color: #dbd8d8;
+	width: calc(100vw - 60px);
+	height: fit-content;
+
+	display: grid;
+	grid-template-columns: auto auto;
+
+	position: fixed !important;
+	bottom: 0;
+	margin-left: -30px;
+	padding: 10px 30px 10px 30px;
+}
+
+nav a:nth-of-type(even) {
+	justify-self: end;
 }

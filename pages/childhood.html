@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width'>
+	<title>The Life of Saint Augustine of Hippo</title>
+	<link href='../css/global.css' rel='stylesheet' type='text/css'>
+	<link href='../css/content.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body onload="positionElement(tree, []);">
+	<h1>Early Life</h1>
+	<h2 style="padding-left: 150px;">Family Tree</h2>
+	
+	<section>
+		<img src="../images/tree.svg" alt="Saint Augustine's family tree" id="tree">
+		<div class="shadow"></div>
+
+		<ul>
+			<li>
+				St. Augustine, birth name: <b>Aurelius Augustinus</b>, was <b>born</b> in
+				Tagaste (modern day Souk-Ahras, Algeria) on <b>November 13, 354 CE</b>.
+			</li>
+			<li>
+				His family consisted of:
+			</li>
+			<ul>
+				<li><b>Father: Patricus</b></li>
+				<ul>
+					<li>
+						Augustine's pagan father who worked as a decurion (collector of
+						taxes), and whose darker qualities contrasted that of his wife, Monica
+					</li>
+				</ul>
+				<li><b>Mother: Monica</b></li>
+				<ul>
+					<li>
+						The devout Christian mother of Augustine, and after her death, she was
+						canonized as a saint for her piety and unbreakable faith in God
+					</li>
+					<li>
+						The patron saint of mothers, married women, as well as victims of domestic abuse
+					</li>
+				</ul>
+				<li><b>Brother: Navigius</b></li>
+				<li><b>Sister: Perpetua</b></li>
+			</ul>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Brief Summary</h2>
+
+		<div id="upper">
+			<div class="life">
+				<img src="../images/design-dark.svg">
+				<p>November 13, 354 CE: Saint Augustine is born in Tagaste</p>
+				<img src="../images/design-dark.svg">
+			</div>
+			<div class="life">
+				<img src="../images/design-dark.svg">
+				<p>
+					A few years later, Augustine would start his study of rhetoric
+					in Madaura at the age of 12
+				</p>
+				<img src="../images/design-dark.svg">
+			</div>
+			<div class="life">
+				<img src="../images/design-dark.svg">
+				<p>
+					As he reached adolescence, he would slowly involve himself in the 
+					influence of his friends.
+				</p>
+				<ul>
+					<li>1st sin: stealing pears from a neighboring garden for the mere thrill of it</li>
+					<li>2nd sin: excessive sexual lust</li>
+				</ul>
+				<img src="../images/design-dark.svg">
+			</div>
+		</div>
+		
+		<div id="timeline">
+			<img src="../images/design-dark.svg">
+			<img src="../images/design-dark.svg">
+			<img src="../images/design-dark.svg">
+			<img src="../images/design-dark.svg">
+			<img src="../images/design-dark.svg">
+			<img src="../images/design-dark.svg">
+			<div id="points">
+				<img src="../images/cross.svg" class="cross">
+				<img src="../images/cross.svg" class="cross">
+				<img src="../images/cross.svg" class="cross">
+				<img src="../images/cross.svg" class="cross">
+				<img src="../images/cross.svg" class="cross">
+				<img src="../images/cross.svg" class="cross">
+			</div>
+		</div>
+		
+		<div id="lower">
+			<div class="life">
+				<img src="../images/design-dark.svg">
+				<p>
+					He began his education also in Tagaste, attending elementary school
+					and undergoing the classic Latin education
+				</p>
+				<img src="../images/design-dark.svg">
+			</div>
+			<div class="life">
+				<img src="../images/design-dark.svg">
+				<p>
+					At about 16 years old, he was sent to the prestigious city of Carthage
+					to begin his university studies
+				</p>
+				<img src="../images/design-dark.svg">
+			</div>
+			<div class="life">
+				<img src="../images/design-dark.svg">
+				<p>
+					Due to this, he would father his son, Adeodatus, with an unnamed woman
+					that resulted from a sexual relationship at the mere age of 17
+				</p>
+				<img src="../images/design-dark.svg">
+			</div>
+		</div>
+	</section>
+
+	<nav>
+		<a href="#">← Introduction</a>
+		<a href="#">Conversion ⇒</a>
+		<a href="../index.html">⇐ Home</a>
+	</nav>
+
+	<script src="../scripts/animation.js"></script>
+	<script src="../scripts/positioning.js"></script>
+	<script>
+		const tree = document.getElementById("tree")
+		const shadow = document.getElementsByClassName("shadow").item(0);
+		const timelineContent = document.getElementsByClassName("life");
+
+		const pos = [
+			parseFloat(window.getComputedStyle(tree).right.slice(0, -2)),
+			parseFloat(window.getComputedStyle(tree).top.slice(0, -2))
+		];
+
+		animateTimeline([133, 213, 173, 213, 309, 213]);
+	</script>
+</body>
+</html>

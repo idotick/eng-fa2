@@ -14,7 +14,7 @@
 	<h2>The Life of Saint Augustine of Hippo</h2>
 	<img src="./images/saint.svg" alt="Saint Augustine">
 	<img src="./images/spots-circle.svg" class="spot-circle">
-	<img src="./images/design.svg" id="design">
+	<img src="./images/design-light.svg" id="design">
 
 	<div id="timeline"></div>
 
@@ -23,7 +23,7 @@
 	<div class="shadow"></div>
 
 	<img src="./images/cross.svg" class="cross">
-	<div class="button"><a href="#">Early Life</a></div>
+	<div class="button"><a href="./pages/childhood.html">Early Life</a></div>
 	<div class="shadow"></div>
 
 	<img src="./images/cross.svg" class="cross">
@@ -38,7 +38,14 @@
 	<div class="button"><a href="#">Later Years and Legacy</a></div>
 	<div class="shadow"></div>
 
-	<!-- <script src='./scripts/shadow.js'></script> -->
+
 	<script src='./scripts/positioning.js'></script>
+	<script src='./scripts/animation.js'></script>
+	<script>
+		const buttons = document.getElementsByClassName("button");
+		const crosses = document.getElementsByClassName("cross");
+		
+		position(buttons, [crosses]);
+	</script>
 </body>
 </html>
