@@ -39,14 +39,11 @@ function position(basisClass, others) {
 }
 
 function positionElement(basisElement, others) {
-	// Initialize variables for position computation
-	const topPos = parseFloat(window.getComputedStyle(basisElement).top.slice(0, -2));
-	const height = 2 * parseFloat(window.getComputedStyle(basisElement).height.slice(0, -2));
 	const shadow = shadows.item(0);
 
 	// Calculate position
 	const posX = parseFloat(window.getComputedStyle(basisElement).right.slice(0, -2));
-	const posY = topPos;
+	const posY = parseFloat(window.getComputedStyle(basisElement).top.slice(0, -2));
 
 	// Match shadow dimensions to button dimensions
 	shadow.style.width = window.getComputedStyle(basisElement).width;
@@ -65,7 +62,7 @@ function positionElement(basisElement, others) {
 	basisElement.style.right = `${posX}px`;
 	basisElement.style.top = `${posY}px`;
 
-	shadow.style.right = `${posX + 10}px`;
+	shadow.style.right = `${posX - 10}px`;
 	shadow.style.top = `${posY + 10}px`;
 
 	animateShadowElements(posX, posY, basisElement, [basisElement, shadow])

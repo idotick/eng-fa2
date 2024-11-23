@@ -56,16 +56,23 @@ function animateShadowElements(posX, posY, elementListener, elementsToAnimate) {
 
 function animateTimeline(sizes) {
 	const timeline = document.getElementById("timeline");
+	const points = document.getElementById('points');
 	const section = timeline.parentNode;
 
 	const expand = [
-		{},
+		{}, {
+			height: 'fit-content'
+		}
+	];
+	const bounce = [
 		{
-			height: 'fit-content',
+			transform: 'scale(1)'
+		}, {
+			transform: 'scale(1.25)'
 		}
 	];
 
-	const animationDetails = {
+	const expandDetails = {
 		duration: 500,
 		easing: "ease-in-out",
 		delay: 0, iterations: 1, 
@@ -73,22 +80,30 @@ function animateTimeline(sizes) {
 		fill: "forwards" 
 	};
 
-	console.log(section.children.upper.children);
+	const bounceDetails = {
+		duration: 500,
+		easing: "ease-in-out",
+		delay: 0, iterations: 2, 
+		direction: "alternate",
+		fill: "forwards" 
+	};
+
 	for (let i = 0; i < timeline.children.length - 1; i++) {
 		const child = timeline.children.item(i);
+		const p = points.children.item(i);
 		
 		child.addEventListener("mouseover", () => {
+			let element;
 			expand[1].height =`${sizes[i]}px`;
 			
 			if (i % 2 === 0) {
-				const element = section.children.upper.children.item(i/2);
-
-				element.animate(expand, animationDetails);
+				element = section.children.upper.children.item(i/2);
 			} else {
-				const element = section.children.lower.children.item(Math.floor(i/2));
-
-				element.animate(expand, animationDetails);
+				element = section.children.lower.children.item(Math.floor(i/2));
 			}
+
+			element.animate(expand, expandDetails);
+			p.animate(bounce, bounceDetails);
 		});
 	}
 }

@@ -1,5 +1,11 @@
 main {
+	display: grid;
+	grid-template-columns: auto 42vw;
 	gap: 100px;
+}
+
+main ul {
+	grid-column: 2;
 }
 
 section {
@@ -7,9 +13,9 @@ section {
 }
 
 #tree {
+	position: absolute;
 	height: 375px;
 	top: 225px;
-	right: calc(50vw + 100px);
 	border-radius: 45px;
 }
 
@@ -64,7 +70,7 @@ section {
 #lower {
 	margin-left: 192px;
 	align-items: flex-start;
-	margin-bottom: 200px;
+	margin-bottom: 150px;
 }
 
 .life, .life img {
