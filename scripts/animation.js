@@ -33,6 +33,7 @@ function animateShadowElements(posX, posY, elementListener, elementsToAnimate) {
 		fill: "forwards" 
 	};
 
+	// Apply animations to elements
 	elementListener.addEventListener('mouseover', () => {
 		elementsToAnimate.forEach(element => {
 			if (element.className === "shadow") {
@@ -59,6 +60,7 @@ function animateTimeline(sizes) {
 	const points = document.getElementById('points');
 	const section = timeline.parentNode;
 
+	// Animations
 	const expand = [
 		{}, {
 			height: 'fit-content'
@@ -79,7 +81,6 @@ function animateTimeline(sizes) {
 		direction: "normal",
 		fill: "forwards" 
 	};
-
 	const bounceDetails = {
 		duration: 500,
 		easing: "ease-in-out",
@@ -88,6 +89,7 @@ function animateTimeline(sizes) {
 		fill: "forwards" 
 	};
 
+	// Add animations to elements
 	for (let i = 0; i < timeline.children.length - 1; i++) {
 		const child = timeline.children.item(i);
 		const p = points.children.item(i);

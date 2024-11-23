@@ -2,6 +2,7 @@
 	--timelineX: 30vw;
 }
 
+/* Designs */
 body {
 	overflow: hidden;
 }
@@ -43,6 +44,7 @@ img[ alt="Saint Augustine" ] {
 	width: 40vw;
 }
 
+/* Buttons */
 #timeline {
 	background-color: #cda135;
 	width: 5px;

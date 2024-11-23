@@ -34,6 +34,7 @@ function position(basisClass, others) {
 		shadow.style.right = `${posX - 10}px`;
 		shadow.style.top = `${posY + 10}px`;
 
+		// Add animations and shadows
 		animateShadowElements(posX, posY, basis, [basis, shadow])
 	}
 }
@@ -65,5 +66,6 @@ function positionElement(basisElement, others) {
 	shadow.style.right = `${posX - 10}px`;
 	shadow.style.top = `${posY + 10}px`;
 
+	// Add animations and shadows
 	animateShadowElements(posX, posY, basisElement, [basisElement, shadow])
 }

@@ -1,3 +1,4 @@
+/* Main content */
 main {
 	display: grid;
 	grid-template-columns: auto 42vw;
@@ -19,6 +20,7 @@ section {
 	border-radius: 45px;
 }
 
+/* Timeline elements */
 #timeline {
 	background-color: #cda135;
 	width: 100%;
